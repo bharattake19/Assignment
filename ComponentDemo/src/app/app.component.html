@@ -1,0 +1,32 @@
+<!-- <br>
+<div class="form-group">
+  <div class="col-sm-2">
+    <h1>Heading</h1>
+    <input type="text" class="form-control"/><br>        
+    <input type="button" value="Submit" class="btn btn-primary" (click)="ButtonClick()"  />
+  </div>
+</div> -->
+<h1>Component Demo</h1>
+<table border="1" style="border-collapse:collapse">
+  <tr>
+      <th>Customer Id</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+  </tr>
+  <tr *ngFor="let customer of message">
+      <td>{{customer.customerId}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.city}}</td>
+      <td>{{customer.state}}</td>
+  </tr>
+</table>
+<br>
+<app-parent (childEvent)="message=$event" [CustomerList]="customers"></app-parent> 
+<!--<app-customerlist></app-customerlist> -->
+
+
+<!-- <div app="app-employee-list"></div> -->
+<!-- <app-employee-list></app-employee-list> -->

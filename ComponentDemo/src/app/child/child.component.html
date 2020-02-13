@@ -1,0 +1,7 @@
+<h3>Child Component</h3> 
+<div *ngFor="let customer of customers">
+    <b>Value of parent component is: </b>{{ customer.name }}
+</div> 
+
+
+<label>Child Component: </label> <input type="text" #ccomponent (keyup)="onChange(ccomponent.value)"/>

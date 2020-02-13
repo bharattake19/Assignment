@@ -1,0 +1,25 @@
+<p>users works!</p>
+<table class="table table-striped table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <td>Sr.No</td>
+            <td>Id</td>
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users;let i = index">
+            <td>{{i+1}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+Current User: {{user.id}}<br>
+Current User: {{user.name}}
+<hr>
+<h2>Pass data in Query string as parameter</h2>
+<input type="button" value="Load Data" [routerLink]="['/users','100','Bharat']" class="btn btn-primary">
+<h2>Passing Query string values from component to html</h2>
+<input type="button" value="Load Dynamic Data" [routerLink]="['/users',userId,userName]" class="btn btn-primary">

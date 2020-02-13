@@ -1,0 +1,22 @@
+<p>servers works!</p>
+<input type="button" value="Reload Page" class="btn btn-primary" (click)="reloadPage()">
+<table class="table">
+    <thead>
+        <tr>
+            <td>Server Id</td>
+            <td>Server Name</td>
+            <td>IsActive</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let server of servers">
+            <td>{{server.id}}</td>
+            <td>{{server.serverName}}</td>
+            <td>{{server.isActive}}</td>
+            <td>
+                <a [routerLink]="['/serves',5,'edit']" [queryParams]="{allowEdit:'1'}" fragment="loading" class="btn btn-primary">Edit</a><!--"-->
+            </td>
+        </tr>
+    </tbody>
+</table>

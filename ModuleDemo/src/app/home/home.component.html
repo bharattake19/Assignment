@@ -1,0 +1,150 @@
+<p>home works!</p>
+<h1>Data Bindind</h1>
+{{message}} {{10*10}}
+<br><br>
+<p>Week Days:</p>
+<ul>
+    <li *ngFor="let day of days;index as i">
+        {{i}} {{ day | uppercase }}
+    </li>
+</ul>
+<div class="col-sm-2">
+    <select class="form-control">
+        <option value="0">--Select--</option>
+        <option *ngFor="let day of days;index as i" value="{{i+1}}">{{day}}</option>
+    </select>
+</div>
+<br>
+<div class="col-sm-6">
+    <table class="table table-striped">
+        <thead class="thead-light">
+            <th> Sr.No</th>
+            <th>Week Days</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let day of days;index as i">
+                <td>{{i}}</td>
+                <td>{{day}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<h1>Property Binding</h1>
+<span [innerHTML]='message'></span>
+<br>
+<p [className]="hasError(false) ? 'red' : 'green'">Class Binding</p>
+<input type="button" (click)='showAlertMessage()' value="Show Alert" class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;
+<span>{{buttonMessage}}</span>
+<input type="checkbox" (click)='showAlertMessage()' (mouseover)='showAlertMessage()' (focusout)="hideAlertMessage()">
+
+<br><br>
+<b>Select City: </b>
+<select (change)="getValue($event.target.value)" class="form-control">
+    <option *ngFor="let city of cities">{{city}}</option>
+</select>
+<p>Your selected value :&nbsp;&nbsp;&nbsp;{{selectedCity}}</p>
+
+
+<h1>Event Bublig</h1>
+<div (click)="DivClick()">
+    <button (click)="ButtonClick($event)" class="btn btn-primary">Click Me</button>
+</div>
+<br><br><br><br>
+<h1>Two way data Binding</h1>
+<input type="text" [(ngModel)]="firstName">&nbsp;&nbsp;
+<span>Enter Text:&nbsp;{{firstName}}</span>
+
+<br><br>
+<h2>Structural Directives</h2>
+<div>
+    <!-- <input type="button" *ngIf="onlyOdd" value='Show Odd Number' (click)="onlyOdd =! onlyOdd" class="btn btn-primary"><br><br>
+    <input type="button" *ngIf="!onlyOdd" value='Show Even Number' (click)="onlyOdd =! onlyOdd" class="btn btn-primary"><br><br> -->
+    <button (click)="onlyOdd =! onlyOdd"
+        class="btn btn-primary">{{!onlyOdd?'Show Even Number':'Show Odd Number'}}</button><br><br>
+    <ul class="list-group">
+        <div *ngIf="onlyOdd">
+            <li class="list-group-item" *ngFor="let num of evenNumbers">{{num}}</li>
+        </div>
+        <div *ngIf="!onlyOdd">
+            <li class="list-group-item" *ngFor="let num of oddNumbers">{{num}}</li>
+        </div>
+    </ul>
+</div>
+<br><br>
+<h2>Attribute Directive</h2>
+<div>
+    <ul>
+        <li *ngFor="let num of numbers" [ngClass]="{even:num%2==0,odd:num%2!==0}"
+            [ngStyle]="{backgroundColor:num%2==0?'aqua':'yellow'}">{{num}}</li>
+    </ul>
+</div>
+
+<br><br>
+<h2>Custome Attribute Directive</h2>
+<div appBasicHighliter>This is basic Attribute</div>
+
+
+
+<br><br>
+<h2>String Pipe</h2>
+{{testMessage|uppercase}}<br>
+{{testMessage|lowercase}}<br>
+{{testMessage|titlecase}}<br>
+{{testMessage|slice:0:7}}<br>
+
+<h2>Date & Time Pipe</h2>
+{{currentDate| date :'short'}}
+<p>short : {{currentDate | date:'short'}} </p>
+<p>medium : {{currentDate | date:'medium'}} </p>
+<p>long : {{currentDate | date:'long'}} </p>
+<p>full : {{currentDate | date:'full'}} </p>
+<p>shortDate : {{currentDate | date:'shortDate'}} </p>
+<p>mediumDate : {{currentDate | date:'mediumDate'}} </p>
+<p>longDate : {{currentDate | date:'longDate'}} </p>
+<p>fullDate : {{currentDate | date:'fullDate'}} </p>
+<p>shortTime : {{currentDate | date:'shortTime'}} </p>
+<p>mediumTime : {{currentDate | date:'mediumTime'}} </p>
+<p>longTime : {{currentDate | date:'longTime'}} </p>
+<p>fullTime : {{currentDate | date:'fullTime'}} </p>
+<p>dd-MM-y : {{currentDate | date:'dd-MM-y'}} </p>
+<p>dd-MM-yy HH:mm : {{currentDate | date:'dd-MM-yy HH:mm'}} </p>`
+<h2>Decimal Pipe</h2>
+{{num1 | number}}<br>
+{{num1 | number:'3.2-5'}}
+<h2>Percent Pipe </h2>
+<div>
+    <p> {{num2 | percent}} </p>
+    <p> {{num2 | percent:'2.2-5'}} </p>
+    <p> {{num2 | percent:'1.2-5'}} </p>
+    <p> {{num2 * num2 | percent:'1.2-3'}} </p>
+    <p> {{num2 | percent}} </p>
+    <p> {{num2 | percent:'3.1-5'}} </p>
+    <p> {{num2 | percent:'1.5-5'}} </p>
+</div>
+<h2>Currency Pipe: </h2>
+<div>
+    <p> {{cur1 | currency}} </p>
+    <p> {{cur1 | currency:'INR':false}} </p>
+    <p> {{cur2 | currency:'INR':false:'1.2-4'}} </p>
+    <p> {{cur2 | currency:'USD':true:'2.2-4'}} </p>
+    <p> {{cur2 | currency:'EUR':true:'2.2-5'}} </p>
+    <p> {{cur3 | currency:'JPY':true:'4.2-3'}} </p>
+    <p> {{cur3 | currency:'INR':true:'4.2-3'}} </p>
+    <p> {{cur3 | currency:'INR':true:'4.0-0'}} </p>
+    <p> {{cur3 | currency:'CAD'}} </p>
+    <p> {{cur3 | currency:'CAD':'code'}} </p>
+    <p> {{cur3 | currency:'CAD':'symbol':'4.2-3'}} </p>
+    <p> {{cur3 | currency:'CAD':'symbol-narrow':'4.2-4'}} </p>
+    <p> {{cur3 | currency:'INR':'Indian Rupee':'4.1-1'}} </p>
+    <p> {{1200 | currency:'INR':'symbol':'4.0'}} </p>
+    <p> {{cur2 | currency:'CLP'}} </p>
+</div>
+<h2>JSON Pipe</h2>
+<p>Without JSON pipe:</p>
+<pre>{{object}}</pre>
+<p>With JSON pipe:</p>
+<pre>{{address | json}}</pre>
+
+<h2>Custom Pipe</h2>
+{{firstName | welcome}}

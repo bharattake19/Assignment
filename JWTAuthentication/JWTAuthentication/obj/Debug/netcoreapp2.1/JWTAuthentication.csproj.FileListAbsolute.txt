@@ -1,0 +1,16 @@
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\obj\Debug\netcoreapp2.1\JWTAuthentication.csprojAssemblyReference.cache
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\obj\Debug\netcoreapp2.1\JWTAuthentication.RazorAssemblyInfo.cache
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\bin\Debug\netcoreapp2.1\appsettings.Development.json
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\bin\Debug\netcoreapp2.1\appsettings.json
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\bin\Debug\netcoreapp2.1\JWTAuthentication.deps.json
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\bin\Debug\netcoreapp2.1\JWTAuthentication.runtimeconfig.json
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\bin\Debug\netcoreapp2.1\JWTAuthentication.runtimeconfig.dev.json
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\bin\Debug\netcoreapp2.1\JWTAuthentication.dll
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\bin\Debug\netcoreapp2.1\JWTAuthentication.pdb
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\obj\Debug\netcoreapp2.1\JWTAuthentication.RazorAssemblyInfo.cs
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\obj\Debug\netcoreapp2.1\JWTAuthentication.AssemblyInfoInputs.cache
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\obj\Debug\netcoreapp2.1\JWTAuthentication.AssemblyInfo.cs
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\obj\Debug\netcoreapp2.1\JWTAuthentication.RazorTargetAssemblyInfo.cache
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\obj\Debug\netcoreapp2.1\JWTAuthentication.dll
+E:\Bharat\AngularApps\JWTAuthentication\JWTAuthentication\obj\Debug\netcoreapp2.1\JWTAuthentication.pdb

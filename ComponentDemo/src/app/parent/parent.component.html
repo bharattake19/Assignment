@@ -1,0 +1,23 @@
+<table border="1" style="border-collapse:collapse">
+    <tr>
+        <th>Customer Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+    </tr>
+    <tr *ngFor="let customer of custs">
+        <td>{{customer.customerId}}</td>
+        <td>{{customer.name}}</td>
+        <td>{{customer.address}}</td>
+        <td>{{customer.city}}</td>
+        <td>{{customer.state}}</td>
+    </tr>
+</table>
+<br>
+<input type="button" (click)="SendToParent()" value="Send Data to Parent" class="btn btn-primary">
+<!-- <label>Parent Component: </label> 
+<input type="text" #pcomponent (keyup)="0"/>  -->
+<app-child [custsList]="custs"></app-child> 
+<!-- <app-child (childEvent)="CData=$event"></app-child> -->
+<!-- <p>Value of Child Component: {{ CData }}</p> <app-child (childEvent)="CData=$event"></app-child>  -->

@@ -1,0 +1,38 @@
+<section id="blog" class="section-padding wow fadeInUp delay-05s">
+  <div style="text-align: center;">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="service-title pad-bt15">Latest from our blog</h2>
+      </div>
+      <div class="col-md-12 box" *ngFor="let p of post">
+        <div class="blog-sec">
+          <div class="blog-img">
+            <a href="">
+              <!-- <img src="img/blog01.jpg" class="img-responsive"> -->
+            </a>
+          </div>
+          <div class="blog-info">
+            <h2>{{p.title}}</h2>
+            <div class="blog-comment">
+              <p>Posted In: <span>Legal Advice</span></p>
+              <p>Posted Date: <span>{{p.createdDate}}</span></p>
+              <p>
+                <span><a href="#"><i class="fa fa-comments"></i></a> 15</span>
+                <span><a href="#"><i class="fa fa-eye"></i></a> 11</span></p>
+            </div>
+            <span>{{p.description}}</span>
+            <!-- routerLink="['blogdetails',11]" -->
+            <a class="read-more" (click)="onGetDetails(p.postId)">Read more →</a>
+            <div style="float: right;">
+              <a (click)="editPost(p.postId)" class="btn btn-warning">Edit</a>
+              <a (click)="deletePost(p.postId)" class="btn btn-danger">Delete</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
