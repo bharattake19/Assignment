@@ -1,27 +1,38 @@
-# RoutingNavigation
+Conver Bellow Topics
+====================
+1.Router navigation with URL param parameter
+2.routerLinkActive
+3.routerLinkActiveOptions
+4.routerLink
+5.this.route.snapshot.params
+6.this.route.params.subscribe
+7.paramSubscription.unsubscribe()
+8.ngx-bootstrap/dropdown
+9.Install Bootstrap for design UI
+10.queryparam,fragment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+File Details
+============
+1.app.module.ts
+    -Create routing in appRoutes and register in RouterModule.forRoot(appRoutes)
+2.users.component.html
+    -Using loops show user details
+    -load Data button load perticular [routerLink]="['/users','100','Bharat']" details
+    -load Dynamic data value="Load Dynamic Data" [routerLink]="['/users',userId,userName]"
+3.app.module.html
+    -Nav bar (Home,Servers,Users)
+    -Model Popup design and hide model popup.
+    -load user and server list in Router outlet
+4.server.component.ts
+    -create server array and bind into html file.
+5.edit-server.component.ts
+    -this.queryString=this.route.snapshot.queryParams;
+    -this.fragmentValue=this.route.snapshot.fragment;
+6.servers.component.html
+    -Show Server list and last give edit button
+    -Edit button call [queryParams]="{allowEdit:'1'}" fragment="loading"
+7.users.component.ts
+    -id: this.route.snapshot.params['Id'],
+    -name: this.route.snapshot.params['Name']
+    -this.user.id=param['Id']
+    -this.user.name=param['Name']
