@@ -36,3 +36,11 @@ File Details
     -name: this.route.snapshot.params['Name']
     -this.user.id=param['Id']
     -this.user.name=param['Name']
+Folder Structure
+=================
+1.Home-Load Edit Load Servers button static values passs
+2.servers
+    -edit-server -Getting query parameter and log in console
+  -displat server details
+3.users
+    -same pass query details
