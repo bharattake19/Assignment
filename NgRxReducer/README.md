@@ -1,27 +1,27 @@
-# NgRxReducer
+Cover bellow Topics
+====================
+1.Use async pipe
+2.Store from @ngrx/store
+3.Create action
+4.Create Reducer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
-## Development server
+File Details
+=============
+1.counter.reducer.ts
+    -createReducer from ngrx/store
+    -const _counterReducer = createReducer(initialState,
+        on(increment, state => state + 1),
+        on(decrement, state => state - 1),
+        on(reset, state => 0),
+    );
+    -counterReducer(state, action)
+2.counter.actions.ts
+    -create action for increment,decrement and reset
+3.app.module.ts
+    -Configured StoreModule.forRoot({ count: counterReducer })
+    -Component
+4.my-counter.component
+    -Increment, Decrement and Reset Button
+    
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
