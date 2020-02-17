@@ -47,3 +47,14 @@ Files Details
 7.CourseRoutingModule.ts
     -Course related component confugured in here.
     -Child Routing
+    
+    
+Folder Structure
+=================
+1.basic-hightlight-
+    -Create custom directives
+2.courses - Related to Course module,CourseRouting and Components
+3.Home - All Event and Pipes demo
+4.Shared-create test directive same as basic hightlight directive
+5.student - Student module and Component
+6.student-dashboard - Student module, routing and component
