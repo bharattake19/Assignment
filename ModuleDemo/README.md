@@ -1,32 +1,49 @@
-# ModuleDemo
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+In this application cover bellow points
+=======================================
+1.RootModule (App Module)
+2.Forms Module
+3.Shared Module
+4.Directives
+5.Lazy Loading
+6.Pipe and Custom Pipe (WelcomePipe)
+7.Class Binding
+8.Property Binding
+9.Event Binding
+10.Loops
+11.Use routerLink to navigation to navbar
 
 
-## Projects Notes
-1) ngClass and ngStyle is attribute directives.
-2) ngFor
+Files Details
+=============
+1.app-routing.module.ts - Configured Student and Cource Module.
+    -Base on Student click load student Module.
+    -Base on Cource click load Cource Module.
+    -loadChildren
+    -RouterModule.forRoot(routes)
+    -HomeComponent set '' default path
+    -Main routing file
+2.student.module.ts - Confugured student component.
+    -student-routing-module-ts - Write routing rute in this of student
+3.shared-test.directive.ts - Create custom directive to set background color yellow.
+4.home.component.html
+    -Use Property binding
+    -Event Binding
+    -ngFor and Index
+    -Event Bubling
+    -Two way data binding
+    -Structureal directives
+    -Attribute Directive
+    -Custome Attribute Directive
+    -String Pipe
+    -Date & Time Pipe
+    -Percent Pipe
+    -Currency Pipe
+    -JSON Pipe
+    -Custom Pipe
+5.student.routing.module-
+    -routeModule module
+6.basic-hightlight-directive
+    -Create custom directive to highlight with yellow color
+7.CourseRoutingModule.ts
+    -Course related component confugured in here.
+    -Child Routing
